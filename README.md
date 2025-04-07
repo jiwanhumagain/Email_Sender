@@ -38,4 +38,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## setup .env file
 EMAIL_USER=your_email@gmail.com
+
 EMAIL_PASS=your_email_password
