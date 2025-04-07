@@ -7,7 +7,7 @@ export async function POST(req) {
     const formData = await req.json();
 
     if (!formData.email || !formData.fullName) {
-      return NextResponse.json({ message: 'Missing required fields' }, { status: 400 });
+      return NextResponse.json({ message: 'Missing required fields' });
     }
 
     const transporter = nodemailer.createTransport({
@@ -46,7 +46,6 @@ export async function POST(req) {
     console.error('Error sending email:', error);
     return NextResponse.json(
       { message: 'Failed to send email', error: error.message },
-      { status: 500 }
     );
   }
 }
